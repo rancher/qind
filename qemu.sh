@@ -56,7 +56,7 @@ fi
 if [ -n "$PUB_KEY" ]; then
     echo "#cloud-config" >> ${USER_DATA}
     echo "ssh_authorized_keys:" >> ${USER_DATA}
-    echo "- $(<${PUB_KEY})" >> ${USER_DATA}
+    echo "- $(cat ${PUB_KEY})" >> ${USER_DATA}
 fi
 
 if [ -e "$USER_DATA" ]; then
