@@ -7,7 +7,7 @@ An easy to use QEMU runner. Its current primary purpose is to help test RancherO
 Usage:
 
 ```sh
-$ docker run  -d --name=qind-vm -it --device=/dev/kvm:/dev/kvm -p 2222:2222 \
+$ docker run  -d --name=qind-vm -it --device=/dev/kvm:/dev/kvm -p 2222:22 \
               -v ./stuff:/stuff \
               rancher/qind \
               --hostname "your-host" \

@@ -72,7 +72,7 @@ fi
 
 exec qemu-system-x86_64 -serial stdio \
     -net nic,vlan=0,model=virtio \
-    -net user,vlan=0,hostfwd=::2222-:22,hostname=${HOST_NAME:-qind} \
+    -net user,vlan=0,hostfwd=::22-:22,hostname=${HOST_NAME:-qind} \
     -drive if=virtio,file=${HD} \
     ${KVM_ENABLE} \
     -smp 2 \
